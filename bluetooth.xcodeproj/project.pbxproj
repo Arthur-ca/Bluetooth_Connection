@@ -14,6 +14,7 @@
 		9748937B2BB9FB7000A05045 /* bluetoothTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9748937A2BB9FB7000A05045 /* bluetoothTests.swift */; };
 		974893852BB9FB7000A05045 /* bluetoothUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974893842BB9FB7000A05045 /* bluetoothUITests.swift */; };
 		974893872BB9FB7000A05045 /* bluetoothUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974893862BB9FB7000A05045 /* bluetoothUITestsLaunchTests.swift */; };
+		974893942BBA020100A05045 /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974893932BBA020100A05045 /* BluetoothService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		974893802BB9FB7000A05045 /* bluetoothUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bluetoothUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		974893842BB9FB7000A05045 /* bluetoothUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bluetoothUITests.swift; sourceTree = "<group>"; };
 		974893862BB9FB7000A05045 /* bluetoothUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bluetoothUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		974893932BBA020100A05045 /* BluetoothService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		974893682BB9FB6D00A05045 /* bluetooth */ = {
 			isa = PBXGroup;
 			children = (
+				974893932BBA020100A05045 /* BluetoothService.swift */,
 				974893692BB9FB6D00A05045 /* bluetoothApp.swift */,
 				9748936B2BB9FB6D00A05045 /* ContentView.swift */,
 				9748936D2BB9FB6F00A05045 /* Assets.xcassets */,
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9748936C2BB9FB6D00A05045 /* ContentView.swift in Sources */,
+				974893942BBA020100A05045 /* BluetoothService.swift in Sources */,
 				9748936A2BB9FB6D00A05045 /* bluetoothApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,8 +426,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"bluetooth/Preview Content\"";
+				DEVELOPMENT_TEAM = A388CVSU7R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = Hello;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -450,8 +456,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"bluetooth/Preview Content\"";
+				DEVELOPMENT_TEAM = A388CVSU7R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = Hello;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
