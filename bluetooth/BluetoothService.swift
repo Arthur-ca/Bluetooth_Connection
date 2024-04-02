@@ -106,8 +106,8 @@ extension BluetoothService: CBPeripheralDelegate {
                 print("No data received for \(characteristic.uuid.uuidString)")
                 return
             }
-            
-            let sensorData: Float = data.withUnsafeBytes { $0.pointee }
+            print(data)
+            let sensorData: Int = data.withUnsafeBytes { $0.pointee }
             humidityValue = sensorData
         }
     }
