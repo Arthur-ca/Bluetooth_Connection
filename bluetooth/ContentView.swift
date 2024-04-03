@@ -37,15 +37,27 @@ struct ContentView: View {
     }
     
     func toggleBluetooth() {
-        let commandByte: UInt8 = 0x01 // The command in byte form
-        let data = Data([commandByte]) // Creating Data from the byte
-        guard let char = BluetoothService.shared.sendCharacteristic else {
-            print("Could not find command characteristic")
-            return
+        if BluetoothService.shared.peripheralStatus == .connected {
+            let commandByte: UInt8 = 0x01 // The command in byte form
+            let data = Data([commandByte]) // Creating Data from the byte
+            guard let char = BluetoothService.shared.sendCharacteristic else {
+                print("Could not find command characteristic")
+                return
+            }
+            BluetoothService.shared.sensorPeripheral?.writeValue(data, for: char, type: .withResponse)
+            BluetoothService.shared.peripheralStatus = .disconnected
+            BluetoothService.shared.humidityValue = ""
         }
-        BluetoothService.shared.sensorPeripheral?.writeValue(data, for: char, type: .withResponse)
-        BluetoothService.shared.peripheralStatus = .disconnected
-        BluetoothService.shared.humidityValue = ""
+        else if BluetoothService.shared.peripheralStatus == .disconnected {
+            let commandByte: UInt8 = 0x02 // The command in byte form
+            let data = Data([commandByte]) // Creating Data from the byte
+            guard let char = BluetoothService.shared.sendCharacteristic else {
+                print("Could not find command characteristic")
+                return
+            }
+            BluetoothService.shared.sensorPeripheral?.writeValue(data, for: char, type: .withResponse)
+            BluetoothService.shared.peripheralStatus = .connected
+        }
     }
 }
 
